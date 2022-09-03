@@ -1,5 +1,4 @@
-import React from 'react';
-import CategoryItem from './components/category-item/category-item.component';
+import Directory from './components/directory/directory.component';
 
 const App = () => {
   const categories = [
@@ -30,13 +29,7 @@ const App = () => {
     },
   ];
 
-  return (
-    <React.Fragment>
-      {categories.map(({ imageUrl, id, title }) => (
-        <CategoryItem imageUrl={imageUrl} key={id} title={title} />
-      ))}
-    </React.Fragment>
-  );
+  return <Directory categories={categories} />;
 };
 
 export default App;
